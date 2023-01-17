@@ -1,13 +1,16 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router'
 import { checkAuth } from '@/stores/checkAuth'
-
+import NavBar from'./components/Nav.vue'
 
 export default{
 	setup(){
 		const  checkLogin = checkAuth()
 		return {checkLogin}
 	},
+	components: {
+		NavBar
+  	},
 	mounted(){
 
 		console.log(this.checkLogin.isLogin)
@@ -17,7 +20,7 @@ export default{
 </script>
 
 <template>
-	test by again
+	<NavBar/>
 	<!-- <header>
 		<div class="wrapper">
 			<HelloWorld msg="You did it!" />
@@ -27,5 +30,5 @@ export default{
 			</nav>
 		</div>
 	</header> -->
-	<RouterView />
+	<!-- <RouterView /> -->
 </template>
