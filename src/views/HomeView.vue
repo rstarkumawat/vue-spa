@@ -1,9 +1,8 @@
-<script setup>
+<script >
 
 </script>
 
 <template>
   <main>
-    test by rstar
   </main>
 </template>
